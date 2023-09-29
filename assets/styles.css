@@ -19,53 +19,31 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url(https://fauzansulthoni.github.io/integrated698/assets/img/background.png);
+    background: url('https://fauzansulthoni.github.io/integrated698/assets/img/background.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     overflow-x: hidden;
+    overflow-y: hidden;
     z-index: 1;
 }
-.container{
-    display: grid;
-    justify-content: center;
-    position: relative;
-    top: 15vh;
-    z-index: 10;
-}
-#logo-marhalah img{
-    position: relative;
-    display: grid;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+#logo-marhalah img{    
     margin: 0;
     width: 200px;
     z-index: 10;
 }
-#tagline-marhalah{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
+
 
 .integrated-tagline{
     font-family: 'Cinzel Decorative', Courier, monospace;
     font-weight: 900;
     font-size: 3em;   
-    color: #1b4067;
+    margin-bottom: -10px;
+    color: #a16f04;
+    text-shadow: 5px 5px 10px rgb(160, 158, 158);
 }
 
-#written-animation{
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .10em solid #1b4067; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .05em; /* Adjust as needed */
-    animation: 
-        typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
-
-}
     /* The typing effect */
     @keyframes typing {
     from { width: 0 }
@@ -78,7 +56,7 @@ body {
     50% { border-color: #1b4067; }
 }
     
-.integrated-tagline-2{
+/* .integrated-tagline-2{
     font-family: 'JaneAusten', Courier, monospace;
     font-weight: 900;
     font-size: 2rem;
@@ -86,7 +64,7 @@ body {
     margin-left: 50%;
     transform: translate(-27%, -15%);
     width: 100%;
-}
+} */
 
 
 #branding-flyer{
@@ -97,6 +75,7 @@ body {
     height: 100vh;
     z-index: 5;
 }
+
 .top-right-flyer{
     width: 400px;
     position: absolute;
@@ -111,43 +90,147 @@ body {
     left: -75px;
     z-index: 10;
 }
-
-.link{
-    position: relative;
-    /* top: 60%;
-    left: 50%; */
-    /* transform: translate(-43%, -50%); */
-    z-index: 20;
-    width: 100%;
-    margin: auto;
-}
-
-.link-drive{
-    display: grid;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
-    background-color: #caac74;
-    border: 2px solid #1b4067;
-    transition: 0.3s;
-    width: 100%;
-}
-
-
-a{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    max-height: 85vh;
+    z-index: 10;
 }
-@media (min-width: 481px) {
-    .link-drive:hover{
-        display: inline-block;
-        transform: scale(1.5);
-        background-color: #1b4067;
-        border: 2px solid #edf2e1;
+
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    backdrop-filter: blur(25px);
+    /* background-color: white; Background color for links container */
+}
+
+.link {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    background-color: #f0f0f0; /* Background color for link boxes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+a {
+    text-transform:uppercase;
+    text-decoration: none;
+    color: #6a4a04;
+}
+p {
+    font-family: 'Courier New', Courier, monospace;
+   font-size: 1.5rem; 
+    color: #6a4a04;
+}
+
+/* .link:hover {
+    transform: scale(1.1);
+} */
+
+
+
+/* CSS */
+.button-51 {
+  background-color: transparent;
+  border: 1px solid #266DB6;
+  box-sizing: border-box;
+  color: #00132C;
+  font-family: "Avenir Next LT W01 Bold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-51:hover,
+.button-51:active {
+  outline: 0;
+}
+
+.button-51:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flip {
+	backface-visibility: visible !important;
+	animation: flip 4s ease infinite;
+}
+@keyframes flip {
+	0% {
+		transform: perspective(900px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	40% {
+		transform: perspective(900px) translateZ(150px) rotateY(170deg);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(900px) translateZ(150px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	80% {
+		transform: perspective(900px) rotateY(360deg) scale(.95);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(900px) scale(1);
+		animation-timing-function: ease-in;
+	}
+}
+
+.button-51:before {
+  background-color: #efdfaf;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.button-51:hover:before {
+  background-color: #f5a74d;
+}
+.content p{
+    color: #6a4a04;
+}
+
+@media (min-width: 768px) {
+  .button-51 {
+    padding: 16px 32px;
+  }
+}
+@media (max-width: 962px) {
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 85vh;
+        text-align: center;
+        color: white;
+        z-index: 10;
     }
 }
 
@@ -156,74 +239,21 @@ a{
     *{
         overflow-x: hidden;
     }
+    
     #background {
         position: relative;
         top: 0;
         left: 0;
-        background-size: cover;
         background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         z-index: 1;
     }
-    .container{
-        top: 0;
-        height: 100vh;
-        overflow-y: auto;
-    }
-    #logo-marhalah img{
-        position: relative;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -40%);
-        width: 150px;
-        z-index: 10;
-    }
-    .integrated-tagline{
-        font-family: 'Cinzel Decorative', Courier, monospace;
-        font-weight: 900;
-        font-size: 1.2em;   
-        color: #1b4067;
-    }
-    #tagline-marhalah{
-        position: relative;
-        display: grid;
-        align-content: stretch;
-        left: 50%;
-        transform: translate(-50%, -17%);
-        z-index: 10;
-    }
-    
-    #written-animation{
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .10em solid #1b4067; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .05em; /* Adjust as needed */
-        animation: 
-            typing 3.5s steps(40, end),
-            blink-caret .75s step-end infinite;
-    
-    }
-        /* The typing effect */
-        @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
-    
-        /* The typewriter cursor effect */
-        @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: #1b4067; }
-    }
+
+
+
         
-    .integrated-tagline-2{
-        font-family: 'JaneAusten', Courier, monospace;
-        font-weight: 900;
-        font-size: 0.7em;   
-        display: block;
-        margin-left: 50%;
-        transform: translate(-27%, -15%);
-        width: 100%;
-    }
+
 
     .top-right-flyer{
         width: 200px;
@@ -239,25 +269,18 @@ a{
         left: -75px;
         z-index: 10;
     }
-    .link{
-        display: grid;
-        position: relative;
-        transform: translate(0%, -10%);
-        width: 100%;
-        margin: auto;
-        z-index: 30;
-    }
-    
-    .link-drive{
-        display: grid;
-        place-items: center;        
-        /* margin: 5 5 5 0; */
-        border-radius: 10px;
-        background-color: #caac74;
-        border: 2px solid #1b4067;
-        transition: 0.3s;
-        width: 300px;
-    }
     
 
+}
+
+@media screen and (max-width: 768px) {
+    .links-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .link {
+        width: 80%;
+        height: 80px;
+        margin: 10px 0;
+    }
 }
