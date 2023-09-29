@@ -9,8 +9,8 @@
 </head>
 <body>
     <div id="background">
-        <iframe src="https://fauzansulthoni.github.io/integrated698/assets/musik/ostdisco.mp3" allow="autoplay" width="800" height="100"></iframe>
-<!--         <audio src="https://fauzansulthoni.github.io/integrated698/assets/musik/ostdisco.mp3" autoplay preload="auto"></audio> -->
+<!--         <iframe src="https://fauzansulthoni.github.io/integrated698/assets/musik/ostdisco.mp3" allow="autoplay" width="800" height="100"></iframe> -->
+        <audio src="https://fauzansulthoni.github.io/integrated698/assets/musik/ostdisco.mp3" autoplay preload="auto" loop id="userConfirmed"></audio>
             <div class="content">
                 <div id="logo-marhalah">
                     <img class="flip" src="https://fauzansulthoni.github.io/integrated698/assets/img/lambang-integrated.png" alt="">
@@ -52,9 +52,13 @@
        
     </div>
     <script>
-        
-        if (confirm("Only for people who bought the original PG 698 cassette, Thanks for your support!")){
-            window.addEventListener('load', function () {
+        const audioElement = document.getElementById('myAudio');
+        userConfirmed = window.confirm('Only for people who bought the original PG 698 cassette, Thanks for your support!');
+        if (userConfirmed) {
+            audioElement.play();
+        }
+        // if (confirm("Only for people who bought the original PG 698 cassette, Thanks for your support!")){
+        //     window.addEventListener('load', function () {
                 // var myAudio = document.getElementById("myAudio");
                 // myAudio.currentTime=2;
                 // var isPlaying = false;
@@ -76,8 +80,8 @@
                 //     popupsound.currentTime=2;
                 //     popupsound.play(); //play the audio file
                 // }
-            })
-         }
+         //    })
+         // }
        
     </script>
 </body>
