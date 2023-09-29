@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="https://fauzansulthoni.github.io/integrated698/assets/img/Logo PG 698.png" type="image/x-icon">
 </head>
 <body>
-    <div id="background" onclick="audioElement.play()">
+    <div id="background" onclick="playMusic()">
 <!--         <iframe src="https://fauzansulthoni.github.io/integrated698/assets/musik/ostdisco.mp3" allow="autoplay" width="800" height="100"></iframe> -->
         <audio src="https://fauzansulthoni.github.io/integrated698/assets/musik/ostdisco.mp3" autoplay preload="auto" loop id="myAudio"></audio>
             <div class="content">
@@ -53,6 +53,9 @@
     </div>
     <script>
         const audioElement = document.getElementById('myAudio');
+        function playMusic(){
+            audioElement.play();
+        }
         userConfirmed = window.confirm('Only for people who bought the original PG 698 cassette, Thanks for your support!');
         if (userConfirmed) {
             audioElement.play();
